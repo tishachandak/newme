@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.db
+*.db-journal
+.venv-backup-*/
+.env
+*.db-wal
+*.db-shm
+
+.env.*
+.vercel/
+*.zip

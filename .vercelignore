@@ -1,0 +1,8 @@
+**/.venv/**
+**/.venv-backup-*/**
+**/__pycache__/**
+**/*.db
+**/*.db-*
+**/.env*
+**/test_*.py
+accesslease-sentinel/

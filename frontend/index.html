@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AccessLease · Secure workspace</title><link rel="stylesheet" href="/assets/session.css"><script defer src="/assets/session.js"></script></head>
+<body>
+<section id="login-screen" aria-labelledby="login-title">
+  <div class="login-card"><div class="brand-mark" aria-hidden="true">A</div><p class="eyebrow">ACCESSLEASE · IDENTITY GOVERNANCE</p>
+  <h1 id="login-title">Sign in to your workspace</h1><p class="intro">Your security reviews, leases and audit records are available after authentication.</p>
+  <form id="login-form" hidden><label>Administrator username<input id="username" name="username" autocomplete="username" required minlength="3" maxlength="100"></label>
+  <label>Password<span class="password-field"><input id="password" name="password" type="password" autocomplete="current-password" required minlength="10" maxlength="128"><button id="show-password" type="button" aria-label="Show password" aria-pressed="false">Show</button></span></label>
+  <p id="password-help">Use your existing local administrator credentials.</p>
+  <button id="sign-in" class="primary" type="submit">Sign in securely</button></form>
+  <a id="forgot-password" class="text-button" href="/reset-password" hidden>Forgot password?</a>
+  <section id="recovery-panel" hidden aria-labelledby="recovery-title"><h2 id="recovery-title">Reset administrator password</h2><p class="intro">Run <strong>Reset-Password.cmd</strong> in your project folder to open your private reset link. Enter your new password twice and solve the CAPTCHA. The link expires in 15 minutes.</p>
+  <form id="reset-form"><label>Administrator username<input id="reset-username" autocomplete="username" required minlength="3" maxlength="100"></label><label>New password (10–128 characters)<input id="new-password" type="password" autocomplete="new-password" required minlength="10" maxlength="128"></label><label>Confirm new password<input id="confirm-password" type="password" autocomplete="new-password" required minlength="10" maxlength="128"></label><label>CAPTCHA: <span id="captcha-question">Open your private reset link first.</span><input id="captcha-answer" required inputmode="numeric" autocomplete="off" maxlength="10"></label><button class="primary" id="reset-submit">Reset password</button><p id="reset-status" role="status" aria-live="polite"></p></form><button id="back-to-login" class="text-button" type="button">Back to sign in</button></section>
+  <p id="login-status" role="status" aria-live="polite">Checking your session…</p><button id="retry-session" hidden type="button">Retry connection</button>
+  <div class="auth-note"><strong>Local administrator sign-in</strong><p>Enterprise SSO is not configured. Use the account created for this installation; no default password is provided.</p></div></div>
+</section>
+<section id="authenticated-shell" hidden aria-label="Authenticated workspace">
+  <header class="preview-toolbar"><a href="/" class="preview-brand">AccessLease</a><label for="device-mode">View mode<select id="device-mode"><option value="desktop">Website / Desktop Mode</option><option value="android">Android Phone View</option><option value="ios">iPhone (iOS) View</option></select></label><button id="sign-out" type="button">Sign out</button></header>
+  <p id="device-description" class="device-description" role="status" hidden></p>
+  <div id="device-stage" data-device="desktop"><div id="device-frame"><div class="phone-chrome" aria-hidden="true"><span class="camera"></span></div><div id="workspace-host"></div><div class="phone-home" aria-hidden="true"></div></div></div>
+</section>
+</body></html>

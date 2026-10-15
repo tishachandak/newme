@@ -1,0 +1,37 @@
+/* Mobile-first risk review, progressively enhanced for wider screens. */
+.risk-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.risk-metric { display:flex; flex-direction:column; align-items:flex-start; text-align:left; color:var(--ink); cursor:pointer; min-height:150px; }
+.risk-metric .value { display:block; }.risk-metric .label { color:var(--muted); }
+.metric-link { margin-top:12px; font-size:12px; color:var(--green); }
+.risk-metric[aria-pressed=true] { border-color:#2563eb; box-shadow:0 0 0 1px #2563eb; }
+.model-note { color:var(--muted); margin:0 0 24px; font-size:13px; }
+.model-note p { padding:12px 0; max-width:900px; }
+summary { cursor:pointer; min-height:44px; }
+summary:focus-visible { outline:3px solid #2563eb; outline-offset:3px; }
+.risk-section { margin-bottom:24px; }.queue-heading { display:flex; justify-content:space-between; gap:12px; align-items:center; margin-bottom:16px; }
+.queue-heading h2 { font-size:20px; margin:0 0 7px; }.live-chip { border:1px solid var(--line); background:var(--surface); color:var(--muted); padding:7px 10px; border-radius:20px; font-size:11px; white-space:nowrap; }
+.queue-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }.queue-tabs button { min-height:44px; }
+.queue-tabs [aria-pressed=true] { background:#2563eb!important; color:white!important; border-color:#2563eb; }
+.access-list { display:grid; gap:12px; }.access-card,.record-card { border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--ink); overflow:hidden; }
+.access-card summary { padding:18px; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; list-style:none; }
+.access-card summary::-webkit-details-marker { display:none; }.access-card-person { display:grid; gap:6px; min-width:0; }
+.access-card-person strong { font-size:15px; }.access-card-person span { font-size:13px; overflow-wrap:anywhere; }.access-card-person small { font-size:11px; color:var(--muted); line-height:1.6; }
+.expand-hint { font-size:11px; color:var(--muted); grid-column:1/-1; }.access-card[open] .expand-hint { display:none; }
+.access-card[open] { border-color:#3b82f6; }.risk-pill { align-self:start; display:flex; flex-direction:column; align-items:center; gap:3px; border-radius:9px; padding:9px; min-width:80px; }.risk-pill strong { font-size:23px; }.risk-pill small { font-size:10px; }
+.risk-pill.HIGH { background:#fee2e2;color:#991b1b; }.risk-pill.MEDIUM { background:#fef3c7;color:#92400e; }.risk-pill.LOW { background:#d1fae5;color:#065f46; }
+.access-card-body { padding:0 18px 18px; border-top:1px solid var(--line); animation:reveal-card .18s ease-out; }
+.factor-grid { display:grid; gap:12px; padding:18px 0; }.factor-grid span { display:flex; justify-content:space-between; gap:10px; font-size:12px; }.factor-grid meter { width:100%; height:12px; accent-color:#2563eb; }
+.risk-reasons { padding-left:20px; font-size:13px; line-height:1.8; }.lease-facts { display:grid; gap:12px; font-size:13px; }.lease-facts dt { color:var(--muted); font-size:11px; }.lease-facts dd { margin:4px 0 0; overflow-wrap:anywhere; line-height:1.5; }
+.quick-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }.quick-actions button,.quick-actions a { min-height:44px; }.load-risk { display:block; margin:18px auto; min-height:44px; }.queue-note { margin-top:12px; }
+.secondary-analysis { margin-top:20px; }.secondary-analysis>summary { padding:18px; font-size:14px; font-weight:600; }.secondary-analysis>.overview-grid { margin-top:16px; }
+.people-risk-list { padding:0 18px; }.people-risk-list>div { display:flex; gap:16px; align-items:center; justify-content:space-between; padding:14px 0; border-top:1px solid var(--line); }.people-risk-list small { display:block; color:var(--muted); font-size:11px; margin-top:6px; }
+#lease-action-form { display:grid; gap:18px; margin-top:20px; }#lease-action-form label { display:grid; gap:7px; font-size:14px; }#lease-action-form input { font-size:16px; min-height:44px; }
+.mobile-records { display:grid; gap:10px; padding:12px; }.record-card summary { padding:16px; display:grid; gap:7px; }.record-card summary strong { font-size:14px; }.record-card summary span { font-size:13px; }.record-card summary small { font-size:11px; color:var(--muted); }.record-body { padding:0 16px 16px; }.record-body>div { display:grid; gap:6px; padding:10px 0; border-top:1px solid var(--line); font-size:13px; overflow-wrap:anywhere; }.record-label { color:var(--muted); font-size:10px; letter-spacing:.6px; }.record-body button { min-height:44px; }.desktop-records { display:none; }
+@keyframes reveal-card { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:translateY(0); } }
+@media(min-width:761px){ .mobile-records { display:none; }.desktop-records { display:block; }.risk-metrics { grid-template-columns:repeat(4,minmax(0,1fr)); }.factor-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }.lease-facts { grid-template-columns:repeat(3,minmax(0,1fr)); }.access-card summary { grid-template-columns:minmax(0,1fr) auto 70px; align-items:center; }.expand-hint { grid-column:auto; }.access-card[open] .expand-hint { display:block; opacity:.5; } }
+@media(max-width:760px){ aside { padding:14px 16px; } nav { margin-top:12px; } nav a { min-height:44px; } main { padding:22px 14px; } header { padding:0 14px; gap:10px; }.connection { font-size:10px; }.page-heading { margin-bottom:18px; }h1 { font-size:25px; }.page-heading p { font-size:13px; }.scan-controls label { font-size:11px; } input,select,textarea { font-size:16px!important; }.scan-controls input { width:100%; }.scan-controls button { min-height:44px; }.risk-metric { padding:15px; min-height:166px; }.risk-metric .label { font-size:12px; line-height:1.4; }.risk-metric small { font-size:11px; line-height:1.5; }.risk-metric .value { font-size:30px; margin:8px 0; }.metric-link { font-size:11px; }.panel-head { flex-wrap:wrap; }.queue-heading { align-items:flex-start; }.queue-heading h2 { font-size:18px; }.live-chip { display:none; }dialog { width:calc(100% - 20px); padding:20px; max-height:90dvh; }.quick-actions>* { flex:1 1 120px; text-align:center; }.record-card summary { overflow-wrap:anywhere; }.risk-body { grid-template-columns:120px minmax(0,1fr); gap:12px; }.donut { width:116px;height:116px; }.donut>div { width:90px;height:90px; }.legend-row { grid-template-columns:8px minmax(0,1fr) auto; }.skip-link:not(:focus) { transform:translateY(-150vh); }.large-text .risk-metrics { grid-template-columns:1fr; }.large-text .access-card summary { grid-template-columns:1fr; }.large-text .risk-pill { align-items:flex-start; }.large-text .risk-body { grid-template-columns:1fr; } }
+.high-contrast .risk-pill { background:var(--surface)!important; color:var(--ink)!important; border:2px solid currentColor; }.high-contrast .risk-pill small { color:inherit!important; }
+.reduced-motion .access-card-body { animation:none; }@media(prefers-reduced-motion:reduce){ .access-card-body { animation:none; } }
+
+.factor-grid meter::-webkit-meter-optimum-value { background:#2563eb; }
+.factor-grid meter::-moz-meter-bar { background:#2563eb; }

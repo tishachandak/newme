@@ -1,0 +1,67 @@
+/* Semantic enterprise palette. Labels carry meaning alongside color. */
+:root{--green:#2563eb;--muted:#64748b;--line:#e2e8f0;--surface:#fff;--ink:#0f172a;--page:#f8fafc;color:var(--ink);background:var(--page)}
+body{background:var(--page);color:var(--ink)}
+aside{background:#0f172a;color:#cbd5e1}
+header{background:#1e293b;color:#cbd5e1;border-color:#334155}
+header strong,header .connection{color:#f1f5f9}
+.brand strong,.workspace,.sidebar-bottom{color:#94a3b8}
+.brand-icon{background:#dbeafe;color:#1d4ed8}
+.workspace span,.sidebar-bottom>a,.profile{color:#cbd5e1}
+nav a.active{background:#1e3a5f;color:#bfdbfe}
+nav b{background:#dbeafe;color:#1e40af}
+.demo-label{color:#a7f3d0}.demo-label i{background:#10b981}
+.profile{border-color:#334155}.profile>span{background:#334155;color:#dbeafe}
+.profile small{color:#94a3b8}
+.panel,.metric,dialog,.donut>div{background:var(--surface);color:var(--ink);border-color:var(--line)}
+h1,h2,.person strong{color:var(--ink)}
+p,.eyebrow,.metric .label,.metric small,.person small,.cell-sub,.status-line,.table-footer,footer,.policy-card .rule{color:var(--muted)}
+.subtle-link,.row-action,.profile-link{color:#2563eb}
+.primary{background:#2563eb;color:#fff}.primary:hover{background:#1d4ed8}
+.danger{background:#b91c1c;color:#fff}.danger:hover{background:#991b1b}
+input,select,.form-panel textarea,.secondary,.pagination button{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.form-panel label,#revoke-form label{color:var(--ink)}
+th{background:#f1f5f9;color:#475569;border-color:var(--line)}td{border-color:var(--line)}
+.avatar{background:#e2e8f0;color:#334155}
+.badge.CRITICAL{background:#ffe4e6;color:#9f1239}.badge.HIGH,.badge.status-risk{background:#fee2e2;color:#991b1b}
+.badge.MEDIUM,.badge.status-warning{background:#fef3c7;color:#92400e}
+.badge.LOW,.badge.status-active{background:#d1fae5;color:#065f46}
+.badge.neutral{background:#e2e8f0;color:#334155}
+.metric.alert .value{color:#b91c1c}.risk-score{color:#475569}
+.scan-panel{background:#eff6ff;border-color:#bfdbfe}.scan-info h3,.scan-meta strong{color:#1e3a8a}.scan-info p,.scan-meta{color:#475569}.scan-meta{border-color:#bfdbfe}
+.expiry-banner{background:#fef3c7;border-color:#f59e0b;color:#92400e}
+#notice{background:#d1fae5;border-color:#6ee7b7;color:#065f46}#notice.error,.form-message.error{color:#991b1b}#notice.error{background:#fee2e2;border-color:#fca5a5}
+pre{background:#f1f5f9;color:#334155;border-color:var(--line)}.timeline li{border-color:#3b82f6}.timeline small{color:var(--muted)}
+:focus-visible{outline:3px solid #2563eb}.skip-link{border-color:#2563eb;color:#0f172a}
+
+:root[data-theme=dark]{--surface:#1e293b;--page:#0f172a;--ink:#f1f5f9;--muted:#cbd5e1;--line:#475569;--green:#2563eb;background:var(--page);color:var(--ink)}
+:root[data-theme=dark] body{background:var(--page)}
+:root[data-theme=dark] header{background:#111c30;color:#cbd5e1}
+:root[data-theme=dark] .panel,:root[data-theme=dark] .metric,:root[data-theme=dark] dialog,:root[data-theme=dark] .donut>div{background:var(--surface);color:var(--ink)}
+:root[data-theme=dark] input,:root[data-theme=dark] select,:root[data-theme=dark] textarea,:root[data-theme=dark] .secondary,:root[data-theme=dark] .pagination button{background:#0f172a;color:var(--ink);border-color:var(--line)}
+:root[data-theme=dark] th{background:#172036;color:#cbd5e1;border-color:var(--line)}:root[data-theme=dark] td{border-color:var(--line)}
+:root[data-theme=dark] .form-panel label,:root[data-theme=dark] #revoke-form label,:root[data-theme=dark] .person strong,:root[data-theme=dark] header strong{color:var(--ink)}
+:root[data-theme=dark] p,:root[data-theme=dark] .status-line,:root[data-theme=dark] .metric small,:root[data-theme=dark] .metric .label,:root[data-theme=dark] .cell-sub,:root[data-theme=dark] .person small,:root[data-theme=dark] .eyebrow,:root[data-theme=dark] .risk-score,:root[data-theme=dark] .policy-card .rule{color:var(--muted)}
+:root[data-theme=dark] .profile-link,:root[data-theme=dark] .subtle-link,:root[data-theme=dark] .row-action{color:#93c5fd}
+:root[data-theme=dark] .scan-panel{background:#172c49;border-color:#3b5e87}:root[data-theme=dark] .scan-info h3,:root[data-theme=dark] .scan-meta strong{color:#dbeafe}:root[data-theme=dark] .scan-info p,:root[data-theme=dark] .scan-meta{color:#cbd5e1}
+:root[data-theme=dark] .metric.alert .value{color:#fca5a5}
+:root[data-theme=dark] .expiry-banner{background:#422b0a;border-color:#b77913;color:#fde68a}
+:root[data-theme=dark] #notice{background:#063f32;color:#a7f3d0;border-color:#18765b}:root[data-theme=dark] #notice.error{background:#481c26;color:#fecdd3;border-color:#b34762}:root[data-theme=dark] .form-message.error{color:#fecdd3}
+:root[data-theme=dark] pre{background:#0f172a;color:#e2e8f0;border-color:var(--line)}
+.high-contrast{--muted:#334155;--line:#334155}
+.high-contrast p,.high-contrast small,.high-contrast .cell-sub,.high-contrast .metric .label,.high-contrast .eyebrow,.high-contrast .status-line,.high-contrast .table-footer,.high-contrast .scan-meta{color:#1e293b!important}
+.high-contrast header,.high-contrast header strong,.high-contrast header .connection,.high-contrast aside p,.high-contrast aside small{color:#fff!important}
+.high-contrast .panel,.high-contrast .metric,.high-contrast input,.high-contrast select,.high-contrast textarea{border-color:#334155}
+.high-contrast[data-theme=dark]{--muted:#fff;--line:#cbd5e1}
+.high-contrast[data-theme=dark] p,.high-contrast[data-theme=dark] small,.high-contrast[data-theme=dark] .cell-sub,.high-contrast[data-theme=dark] .metric .label,.high-contrast[data-theme=dark] .eyebrow,.high-contrast[data-theme=dark] .status-line,.high-contrast[data-theme=dark] .table-footer,.high-contrast[data-theme=dark] .scan-meta{color:#fff!important}
+.high-contrast[data-theme=dark] .panel,.high-contrast[data-theme=dark] .metric{border-color:#e2e8f0}
+
+.expiry-panel { margin-bottom: 24px; }
+.expiry-caption { text-align:left; padding: 12px 24px; font-size:14px; }
+
+.expiry-banner { background:#fee2e2; color:#991b1b; border-color:#ef4444; }
+
+button.legend-row { width:100%; border:0; background:transparent; color:inherit; text-align:left; cursor:pointer; gap:12px; }
+button.legend-row:hover { background:rgba(59,130,246,.12); }
+button.donut { border:0; cursor:pointer; flex-shrink:0; color:inherit; }
+#manage-user-form, #delete-user-form { display:grid; gap:16px; margin-top:20px; }
+#manage-user-form label, #delete-user-form label { display:grid; gap:6px; }
